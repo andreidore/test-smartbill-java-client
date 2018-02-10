@@ -10,13 +10,15 @@ public class Test {
 
     public static void main(String[] args) {
 
-	//testTaxes();
-	//testSeries();
+	testTaxes();
+	System.out.println("---------------------------------------");
+	testSeries();
 
     }
 
     public static void testSeries() {
 
+	System.out.println("Test getSeries.");
 	SmartBillClient client = new SmartBillClient(System.getProperty("username"), System.getProperty("token"));
 
 	List<SeriesInfo> list2 = client.getSeries(System.getProperty("cif"));
@@ -28,6 +30,8 @@ public class Test {
     }
 
     public static void testTaxes() {
+	
+	System.out.println("Test getTaxes.");
 
 	SmartBillClient client = new SmartBillClient(System.getProperty("username"), System.getProperty("token"));
 
